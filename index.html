@@ -26,11 +26,11 @@
           <div class="col-12 col-md-4 contacts">
             <div class="row h-100 flex-column flex-nowrap">
               <div class="col-12 header">
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between pb-2 pt-2">
                   <div>
                     <img
                       src="img/avatar_io.jpg"
-                      class="rounded-circle pb-2 pt-2"
+                      class="rounded-circle"
                       alt=""
                     />
                     <span>Sofia</span>
@@ -65,22 +65,29 @@
                   </div>
               </div>
 
-              <div class="col-12 flex-grow-1 overflow-y-auto h0 border-bottom" v-for="(contact, index) in contacts">
-                <div class="align-items-center pt-2 pb-2">
-                    <img :src="contact.avatar" alt="" class="rounded-circle">
-                    <span>{{contact.name}}</span>
+              <div class="col-12 flex-grow-1 overflow-y-auto h0 p-0">
+                <div class="align-items-center pt-2 pb-2 border-bottom position-relative" v-for="(contact, index) in contacts">
+                    <div class="d-flex align-items-center ps-4">
+                        <img :src="contact.avatar" alt="" class="rounded-circle">
+                        <div class="d-flex flex-column ms-3">
+                            <span>{{contact.name}}</span>
+                            <span class="last-message">Ultimo messaggio inviato</span>
+                        </div>
+                        <span class="position-absolute top-0 end-0 me-2 mt-1 last-message">12:00</span> 
+                    </div>
+                    
                 </div>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-8">
             <div class="row h-100 flex-column flex-nowrap">
-              <!-- <div class="col-12 header border-dark border-start">
+              <div class="col-12 header border-start pb-2 pt-2">
                 <div class="d-flex justify-content-between">
                     <div>
                       <img
                         src="img/avatar_io.jpg"
-                        class="rounded-circle pb-2 pt-2"
+                        class="rounded-circle"
                         alt=""
                       />
                       <span>Sofia</span>
@@ -93,7 +100,7 @@
                     </div>
                   </div>
               </div>
-              <div class="col-12 bg-chat flex-grow-1 overflow-y-auto h0"> -->
+              <div class="col-12 bg-chat flex-grow-1 overflow-y-auto h0">
                 Chat
               </div>
               <div class="col-12 sent-message">Sent message</div>
