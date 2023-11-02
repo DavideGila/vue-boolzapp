@@ -20,3 +20,22 @@ body {
       #dbdbd3 100%
     );
 }
+
+#app {
+    width: 100%;
+    height: 100vh;
+    background: var(--my-bg-color);
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--color-headers);
+}
+
+.contacts {
+    background-color: var(--color-white);
+}
+
+.h0 {
+    height: 0;
+}
