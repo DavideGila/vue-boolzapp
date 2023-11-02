@@ -55,3 +55,12 @@ img {
 i {
     color: var(--color-light-icons);
 }
+
+.notifiche {
+    background-color: var(--color-notification);
+}
+
+.notifiche i {
+    color: var(--color-notification);
+    background-color: var(--color-white);
+}
