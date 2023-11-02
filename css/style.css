@@ -49,7 +49,7 @@ body {
 }
 
 img {
-    width: 15%;
+    width: 60px;
 }
 
 i {
@@ -63,4 +63,9 @@ i {
 .notifiche i {
     color: var(--color-notification);
     background-color: var(--color-white);
+}
+
+.last-message {
+    font-size: 13px;
+    color: var(--color-text-grey);
 }
