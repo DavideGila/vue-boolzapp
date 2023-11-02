@@ -65,8 +65,11 @@
                   </div>
               </div>
 
-              <div class="col-12 flex-grow-1 overflow-y-auto h0">
-                Elenco contatti
+              <div class="col-12 flex-grow-1 overflow-y-auto h0" v-for="(contact, index) in contacts">
+                <div>
+                    <img :src="contact.avatar" alt="" class="rounded-circle pb-2 pt-2">
+                    <span>{{contact.name}}</span>
+                </div>
               </div>
             </div>
           </div>
