@@ -44,7 +44,7 @@ body {
     background-image: url('../img/mine.jpg');
 }
 
-.sent-message {
+.sent-message, .search-bar {
     background-color: #F3EEEA;
 }
 
