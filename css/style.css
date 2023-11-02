@@ -47,3 +47,11 @@ body {
 .sent-message {
     background-color: #F3EEEA;
 }
+
+img {
+    width: 15%;
+}
+
+i {
+    color: var(--color-light-icons);
+}
