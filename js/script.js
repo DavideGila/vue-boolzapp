@@ -176,7 +176,8 @@ createApp({
                     ],
                 }
             ],
-            newText: ''
+            newText: '',
+            newResp: 'Ok'
         } 
     }, 
     methods: {
@@ -191,6 +192,14 @@ createApp({
             }
             this.contacts[this.activeIndex].messages.push(message);
             this.newText = '';
+            setTimeout(()=>{
+                const resp = {
+                    date: dt.now().setLocale('it').toLocaleString(dt.TIME_SIMPLE),
+                    message: this.newResp,
+                    status: 'received'
+                } 
+                this.contacts[this.activeIndex].messages.push(resp);
+            }, 1000)
         }
     },
 }).mount('#app')
