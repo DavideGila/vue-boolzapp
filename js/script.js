@@ -177,7 +177,8 @@ createApp({
                 }
             ],
             newText: '',
-            newResp: 'Ok'
+            newResp: 'Ok',
+            filterContacts: []
         } 
     }, 
     methods: {
@@ -200,6 +201,11 @@ createApp({
                 } 
                 this.contacts[this.activeIndex].messages.push(resp);
             }, 1000)
+        },
+        filterName(){
+            this.contacts.filter((element) =>{
+                return this.filterContacts.push(element.name);
+            })
         }
     },
 }).mount('#app')
