@@ -1,4 +1,5 @@
 const {createApp} = Vue;
+const dt = luxon.DateTime;
 
 createApp({
     data() {
@@ -174,12 +175,22 @@ createApp({
                         }
                     ],
                 }
-            ] 
+            ],
+            newText: ''
         } 
     }, 
     methods: {
         contactClick(index){
             return this.activeIndex = index
+        },
+        newMessage(){
+            const message = {
+                date: dt.now().setLocale('it').toLocaleString(dt.TIME_SIMPLE),
+                message: this.newText,
+                status: 'sent'
+            }
+            this.contacts[this.activeIndex].messages.push(message);
+            this.newText = '';
         }
     },
 }).mount('#app')
