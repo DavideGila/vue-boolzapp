@@ -178,7 +178,7 @@ createApp({
             ],
             newText: '',
             newResp: 'Ok',
-            filterContacts: []
+            filter: ''
         } 
     }, 
     methods: {
@@ -203,9 +203,10 @@ createApp({
             }, 1000)
         },
         filterName(){
-            this.contacts.filter((element) =>{
-                return this.filterContacts.push(element.name);
-            })
+            const filterContacts = this.contacts.filter(element => {
+                return element.name.toLowerCase().includes(this.filter.toLowerCase());                
+            });
+            return filterContacts;
         }
     },
 }).mount('#app')
