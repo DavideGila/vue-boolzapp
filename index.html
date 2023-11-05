@@ -67,6 +67,7 @@
                     type="text"
                     class="form-control"
                     placeholder="Cerca o inizia una nuova chat"
+                    v-model="filter"
                   />
                 </div>
               </div>
@@ -74,7 +75,7 @@
               <div class="col-12 flex-grow-1 overflow-y-auto h0 p-0">
                 <div
                   class="align-items-center pt-2 pb-2 border-bottom position-relative"
-                  v-for="(contact, index) in contacts" @click="contactClick(index)"
+                  v-for="(contact, index) in filterName()" @click="contactClick(index)"
                 >
                   <div class="d-flex align-items-center ps-4">
                     <img :src="contact.avatar" alt="" class="rounded-circle" />
