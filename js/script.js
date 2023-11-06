@@ -227,6 +227,10 @@ createApp({
             } else {
                 this.messageIndex = null;
             }
+        },
+        del(index){
+            this.contacts[this.activeIndex].messages.splice(index,1);
+            this.messageIndex = null;
         }
     },
 }).mount('#app')
