@@ -209,6 +209,11 @@ createApp({
                 return element.name.toLowerCase().includes(this.filter.toLowerCase());                
             });
             return filterContacts;
+        },
+        sendMessage(){
+            if (this.newText !== ''){
+                return 'fa-solid fa-paper-plane'                              
+            }
         }
     },
 }).mount('#app')
