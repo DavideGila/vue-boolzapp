@@ -104,8 +104,7 @@
                     />
                     <div class="d-flex flex-column ps-3">
                       <span>{{contacts[activeIndex].name}}</span>
-                      <span class="date" v-if="contacts[activeIndex].messages[contacts[activeIndex].messages.length -1].status === 'received'">Ultimo accesso: {{contacts[activeIndex].messages[contacts[activeIndex].messages.length -1].date}}</span>
-                      <span class="date" v-else>Ultimo accesso: {{contacts[activeIndex].messages[contacts[activeIndex].messages.length -2].date}}</span>
+                      <span class="date">Ultimo accesso: {{contacts[activeIndex].messages[contacts[activeIndex].messages.length -1].date}}</span>
                     </div>
                   </div>
 
