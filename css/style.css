@@ -40,6 +40,14 @@ body {
     height: 0;
 }
 
+.contact-list:hover{
+    background-color: var(--color-contact-hover);
+}
+
+.active {
+    background-color: var(--color-dark-grey);
+}
+
 .bg-chat {
     background-image: url('../img/mine.jpg');
 }
