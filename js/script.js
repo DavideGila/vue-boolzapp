@@ -178,7 +178,8 @@ createApp({
             ],
             newText: '',
             newResp: 'Ok',
-            filter: ''
+            filter: '',
+            empty: true
         } 
     }, 
     methods: {
@@ -191,7 +192,14 @@ createApp({
                 message: this.newText,
                 status: 'sent'
             }
-            this.contacts[this.activeIndex].messages.push(message);
+            if (this.newText = ''){
+                this.empty = true;
+            } else {
+                this.empty = false;
+                if (this.empty = false){
+                    this.contacts[this.activeIndex].messages.push(message);
+                }
+            }            
             this.newText = '';
             setTimeout(()=>{
                 const resp = {
