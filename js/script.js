@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            messageIndex: null,
             contacts: [
                 {
                     id: 1,
@@ -220,5 +221,12 @@ createApp({
                 return 'fa-solid fa-paper-plane'                              
             }
         },
+        dropdown(index){
+            if(this.messageIndex !== index){
+                this.messageIndex = index;
+            } else {
+                this.messageIndex = null;
+            }
+        }
     },
 }).mount('#app')
