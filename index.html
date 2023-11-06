@@ -126,7 +126,7 @@
                           <i class="fa-solid fa-angle-down" aria-expanded="false" @click="dropdown(index)"></i>
                           <ul class="dropdown-menu" :class="{'show': messageIndex === index}">
                             <li><a class="dropdown-item">Message Info</a></li>
-                            <li><a class="dropdown-item">Delete message</a></li>
+                            <li><a class="dropdown-item" @click="del(index)">Delete message</a></li>
                           </ul>
                         </span>
                       </span>
@@ -141,7 +141,7 @@
                           <i class="fa-solid fa-angle-down" aria-expanded="false" @click="dropdown(index)"></i>
                           <ul class="dropdown-menu" :class="{'show': messageIndex === index}">
                             <li><a class="dropdown-item">Message Info</a></li>
-                            <li><a class="dropdown-item">Delete message</a></li>
+                            <li><a class="dropdown-item" @click="del(index)">Delete message</a></li>
                           </ul>
                         </span>
                       </span> <br>
