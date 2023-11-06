@@ -67,7 +67,7 @@
                     type="text"
                     class="form-control"
                     placeholder="Cerca o inizia una nuova chat"
-                    v-model="filter"
+                    v-model.trim="filter"
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@
                     type="text"
                     class="form-control border rounded-2"
                     placeholder="Scrivi un messaggio"
-                    v-model="newText"
+                    v-model.trim="newText"
                     @keyup.enter="newMessage()"
                   />
                   <label class="input-text col-1 border-0 fs-5"
