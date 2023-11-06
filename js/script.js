@@ -182,6 +182,11 @@ createApp({
         } 
     }, 
     methods: {
+        selectedContact(id){
+            if(this.contacts[this.activeIndex].id === id){
+                return 'active'
+            }
+        },
         contactClick(index){
             return this.activeIndex = index
         },
@@ -214,6 +219,6 @@ createApp({
             if (this.newText !== ''){
                 return 'fa-solid fa-paper-plane'                              
             }
-        }
+        },
     },
 }).mount('#app')
